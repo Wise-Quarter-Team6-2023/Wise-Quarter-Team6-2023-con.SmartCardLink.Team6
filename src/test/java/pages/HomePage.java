@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.sql.SQLOutput;
+
 public class HomePage {
     public HomePage(){PageFactory.initElements(Driver.getDriver(),this);}
 
@@ -15,6 +17,12 @@ public class HomePage {
     //Homepage SignIn Button
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButton;
+
+    @FindBy(xpath = "sonol locate");
+    @FindBy(xpath = "sonol locate");
+    @FindBy(xpath = "sonol locate");
+
+
 
 
 

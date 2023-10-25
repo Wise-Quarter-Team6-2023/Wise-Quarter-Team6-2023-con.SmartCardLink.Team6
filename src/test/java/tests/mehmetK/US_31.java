@@ -1,4 +1,4 @@
 package tests.mehmetK;
 
-public class C01 {
+public class US_31 {
 }
