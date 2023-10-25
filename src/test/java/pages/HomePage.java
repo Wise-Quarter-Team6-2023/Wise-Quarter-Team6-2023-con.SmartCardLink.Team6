@@ -16,9 +16,6 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButton;
 
-    // necmettin yorum 1
-    // necmettin yorum 2
-    // necmettin yorum 3
 
 
 }
