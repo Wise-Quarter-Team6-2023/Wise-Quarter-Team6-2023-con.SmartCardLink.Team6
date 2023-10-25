@@ -1,4 +1,4 @@
 package tests.ramazan;
 
-public class Co1 {
+public class C01 {
 }
