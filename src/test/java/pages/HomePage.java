@@ -16,10 +16,6 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButton;
 
-// eyuup
-    // eyuup  20
-//           eyuup    21
-
 
 
 }
