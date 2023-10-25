@@ -21,7 +21,8 @@ public class US_013 extends TestBaseRapor {
 
         UserDashboard userDashboard=new UserDashboard();
         userDashboard.email.sendKeys(ConfigReader.getProperty("user_username"));
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2
+        );
 
 
 
