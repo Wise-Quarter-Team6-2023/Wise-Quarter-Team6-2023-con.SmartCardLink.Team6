@@ -1,4 +1,4 @@
 package tests.necmettin;
 
-public class C01 {
+public class US_010 {
 }
