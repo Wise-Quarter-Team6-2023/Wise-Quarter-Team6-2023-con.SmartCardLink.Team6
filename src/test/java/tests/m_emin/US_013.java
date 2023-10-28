@@ -43,6 +43,8 @@ public class US_013 extends TestBaseRapor {
 
         Assert.assertTrue(userDashboard.profileDetails.isDisplayed(), "Kullanici profil bilgilerini goruntuleyemedi");
         extentTest.pass("Profil bilgilerini goruntuledigini test eder");
+
+        extentTest.info("Kullanici actigi web sitesini kapatir");
     }
 
     @Test
