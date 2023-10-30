@@ -53,8 +53,8 @@ public class US_013 extends TestBaseRapor {
         UserDashboard userDashboard= new UserDashboard();
         Faker faker=new Faker();
 
-        extentTest = extentReports.createTest("Profil bilgilerini goruntuleyebilme",
-                "Kullanici giris yaptiktan sonra profil bilgilerini goruntuler");
+        extentTest = extentReports.createTest("Profil bilgilerini degistirebilme",
+                "Kullanici giris yaptiktan sonra profil bilgilerini degistirebilir.");
 
         Driver.getDriver().get("https://qa.smartcardlink.com/");
         extentTest.info("Kullanici https://qa.smartcardlink.com/ sitesine gider");
@@ -106,16 +106,16 @@ public class US_013 extends TestBaseRapor {
         userDashboard.andorraFlag.click();
         extentTest.info("Yeni ulke kodu girmek icin bir bayrak ikonunu secer");
 
+        userDashboard.userSettingsPhone.clear();
+        extentTest.info("Phone butonu temizlenir");
+
         userDashboard.userSettingsPhone.sendKeys(faker.phoneNumber().cellPhone());
         extentTest.info("Kullanici yeni numarasini phone butonuna yazar");
 
-        Assert.assertTrue(userDashboard.saveButton.isEnabled(),"Kullanici bilgilerini SAVE butonunu aktif bir button olmadigi icin kayit edemez.");
-        extentTest.pass("Kullanici Save butonuna tiklar ve bilgilerini kayit eder");
+        Assert.assertTrue(userDashboard.saveButton.isEnabled(),"Kullanici degistirmek istedigi bilgileri, SAVE butonu aktif olmadigi icin kayit edemez.");
+        extentTest.pass("Kullanici Save butonuna tiklar ve bilgilerini sisteme kayit eder");
 
        // Driver.closeDriver();
         extentTest.info("Kullanici actigi web sitesini kapatir");
-
-        
-
     }
 }
