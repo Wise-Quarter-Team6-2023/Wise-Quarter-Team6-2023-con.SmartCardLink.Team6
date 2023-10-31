@@ -3,12 +3,9 @@ package tests.m_emin;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
-import pages.HomePage;
-import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -18,17 +15,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class US_019 extends TestBaseRapor {
-
-    //Admin bilgilieri ile giriş yaptıktan sonra kullanıcılar bölümünde  kayıtlı kullanıcıları,
-    // toplam kullanıcı sayısını,
-    // aktiflik durumlarını,
-    // kullanıcı bilgilerini görüntüleyebildiğimi ve değiştirebildiğimi,
-    // şifrelerini değiştrebildiğimi,
-    // yeni hesap açabildiğimi ve hesabı silebildiğimi doğrulayabilmeyliyim
     @Test
     public void US_019_TC01() {
         AdminDashboard adminDashboard = new AdminDashboard();
-        extentTest = extentReports.createTest("Admin bilgileri ile giris yapabilme",
+        extentTest = extentReports.createTest("Admin bilgileri ile siteye giris yapabilme",
                 "Admin, admin giris bilgileri ile giris yaptiktan sonra admin sayfasina ulasir");
 
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -51,7 +41,7 @@ public class US_019 extends TestBaseRapor {
     @Test
     public void US_019_TC02() {
         AdminDashboard adminDashboard = new AdminDashboard();
-        extentTest = extentReports.createTest("Admin bilgileri ile giris yapabilme",
+        extentTest = extentReports.createTest("Kayitli kullanicilari görüntüleyebilme",
                 "Admin, admin giris bilgileri ile giris yaptiktan sonra admin sayfasina ulasir");
 
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -78,8 +68,8 @@ public class US_019 extends TestBaseRapor {
     @Test
     public void US_019_TC03() {
         AdminDashboard adminDashboard = new AdminDashboard();
-        extentTest = extentReports.createTest("Admin bilgileri ile giris yapabilme",
-                "Admin, admin giris bilgileri ile giris yaptiktan sonra admin sayfasina ulasir");
+        extentTest = extentReports.createTest("Toplam kullanici sayisini görüntüleyebilme",
+                "Admin, admin giris bilgileri ile giris yaptiktan sonra toplam kullanici sayisini görüntüleyebilir.");
 
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Admin, https://qa.smartcardlink.com/ sitesine gider");
@@ -102,6 +92,7 @@ public class US_019 extends TestBaseRapor {
         String toplamKullaniciSayisi = kullaniciSayisiTextOgeleri[5];
         System.out.println(toplamKullaniciSayisi);
         Assert.assertFalse(toplamKullaniciSayisi.isEmpty(), "Toplam kullanici sayisi gözükmüyor.");
+
         extentTest.pass("Toplam kullanici sayisini görür.");
         extentTest.info("Admin actigi web sitesini kapatir");
     }
@@ -212,7 +203,7 @@ public class US_019 extends TestBaseRapor {
         adminDashboard.editMenuEmail.click();
         adminDashboard.editMenuEmail.clear();
         adminDashboard.editMenuEmail.sendKeys(faker.internet().emailAddress());
-        extentTest.info("Edit sayfasinda ki email'e tiklar, eski bilgiyi siler ve email yazar");
+        extentTest.info("Edit sayfasinda ki email'e tiklar, eski bilgiyi siler ve yeni email yazar");
 
         adminDashboard.editMenuBayrak.click();
         if (adminDashboard.editMenuUnitedStatesFlag.getText().equals("United States")) {
@@ -220,7 +211,7 @@ public class US_019 extends TestBaseRapor {
         } else {
             adminDashboard.editMenuUnitedStatesFlag.click();
         }
-        extentTest.info("Edit sayfasinda ki bayraga tiklar ve degistirir");
+        extentTest.info("Edit sayfasinda ki ülke telefon kodunu temsil eden bayraga tiklar ve degistirir");
 
         adminDashboard.editMenuPhone.click();
         adminDashboard.editMenuPhone.clear();
@@ -236,6 +227,7 @@ public class US_019 extends TestBaseRapor {
             adminDashboard.editMenuPlanStandartSecenegi.click();
         }
         extentTest.info("Admin plan menusunden bir secenegi secer");
+
         ReusableMethods.wait(2);
         extentTest.info("Edit sayfasinda ki plan menüsünden bir secenek secer");
 
@@ -282,8 +274,12 @@ public class US_019 extends TestBaseRapor {
         adminDashboard.sifreDegismeSaveButonu.click();
         extentTest.info("Save'e tiklayarak girdigi sifreyi kaydeder");
 
-        //////////CIKAN MESAJ 5 sn sonra kayboldugu icin locate edemiyorum
+        ReusableMethods.wait(2);
 
+        ReusableMethods.hover(adminDashboard.passwordDegistiUyarisi);
+        ReusableMethods.wait(2);
+
+        Assert.assertTrue(adminDashboard.passwordDegistiUyarisi.isDisplayed(),"Yapilan sifre degisikliginin onay uyarisi gözükmedi.");
 
         extentTest.info("Admin actigi web sitesini kapatir");
 
@@ -295,7 +291,7 @@ public class US_019 extends TestBaseRapor {
         AdminDashboard adminDashboard = new AdminDashboard();
         Faker faker = new Faker();
 
-        extentTest = extentReports.createTest("Admin tarafindan yeni bir kullanici hesabi acilabilmesi",
+        extentTest = extentReports.createTest("Admin tarafindan yeni bir kullanici hesabi acilabilmeli",
                 "Admin, users menusune yeni bir kullanici ekleyebilmeli");
 
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
@@ -331,7 +327,7 @@ public class US_019 extends TestBaseRapor {
         } else {
             adminDashboard.editMenuUnitedStatesFlag.click();
         }
-        extentTest.info("Ulke telefon kodu bilgisini girer");
+        extentTest.info("Ulke telefon kodu bayrak simgesi secilerek girilir");
 
         adminDashboard.editMenuPhone.sendKeys(faker.phoneNumber().cellPhone());
         extentTest.info("Telefon numarasini girer");
@@ -364,8 +360,8 @@ public class US_019 extends TestBaseRapor {
     public void US_019_TC09() {
         AdminDashboard adminDashboard = new AdminDashboard();
 
-        extentTest = extentReports.createTest("Admin tarafindan yeni bir kullanici hesabi acilabilmesi",
-                "Admin, users menusune yeni bir kullanici ekleyebilmeli");
+        extentTest = extentReports.createTest("Kayitli kullanici silinebilmeli",
+                "Admin, users menusune kayitli olan bir kullaniciyi silebilmeli");
 
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
         extentTest.info("Admin, https://qa.smartcardlink.com/ sitesine gider");
