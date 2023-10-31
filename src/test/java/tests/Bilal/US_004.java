@@ -13,6 +13,7 @@ import pages.HomePage;
 import utilities.*;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 
 public class US_004 extends TestBaseRapor {
@@ -34,9 +35,15 @@ public class US_004 extends TestBaseRapor {
         jse.executeScript("arguments[0].scrollIntoView(true);", homePage.footer);
         extentTest.info("Kullanici home page' de footer kismina gelir");
         ReusableMethods.wait(1);
+        extentTest.info("ana sayda'da bulunan footer kismina gelinir");
 
-        Assert.assertTrue(homePage.footer.isDisplayed());
-        extentTest.pass("Home Page footer kisminda'ki fomksiyonlar görüntülenir");
+        List<WebElement> footerElemanlari= Driver.getDriver().findElements(By.xpath("//*[@target='_blank']"));
+
+        for (WebElement each : footerElemanlari
+             ) {
+            Assert.assertTrue(each.isDisplayed());
+        }
+        extentTest.pass("Home Page footer kisminda'ki fonksiyonlar görüntülendigi test edilir");
 
     }
 
@@ -112,13 +119,12 @@ public class US_004 extends TestBaseRapor {
         }
         Driver.getDriver().switchTo().window(ikiciwhd);
         extentTest.info("Yeni TAB'a gecilir");
+        String expectedUrl = "https://twitter.com/";
+        String actuealUrl = Driver.getDriver().getCurrentUrl();
         ReusableMethods.wait(1);
+        Assert.assertEquals(actuealUrl,expectedUrl,"gidilen sayfa X url icermiyor");
 
 
-        String expected = ConfigReader.getProperty("x");
-        String actual = ConfigReader.getProperty("pinterest");
-        Assert.assertNotEquals(expected,actual);
-        extentTest.fail("footer'da X'e tiklayinca istenen linke gidilmiyor");
       //  ReusableMethods.getScreenshot("pinterst.com");
       //  extentTest.info("Testin ekran görüntüsü alinir");
 
@@ -154,7 +160,7 @@ public class US_004 extends TestBaseRapor {
                 ikiciwhd = each;
             }
         }
-        Driver.getDriver().switchTo().window(ikiciwhd);
+        Driver.getDriver().switchTo().window(ikiciwhd);extentTest.info("Yeni TAB'a gecilir");
         extentTest.info("Yeni TAB'a gecilir");
         homePage.instagramCookies.click();
         ReusableMethods.wait(2);
@@ -308,7 +314,7 @@ public class US_004 extends TestBaseRapor {
         Driver.getDriver().switchTo().window(ikiciwhd);
         extentTest.info("Yeni TAB'a gecilir");
         Assert.assertTrue(homePage.privacyPolicy.isDisplayed());
-        extentTest.pass("Yeni TAB'da termsConditions'in giris sayfasini görüntülenir");
+        extentTest.pass("Yeni TAB'da privacyPolicy'in giris sayfasini görüntülenir");
         ReusableMethods.wait(1);
        //ReusableMethods.getScreenshot("privacyPolicy.com");
        //extentTest.info("Testin ekran görüntüsü alinir");
