@@ -2,12 +2,11 @@ package tests.m_emin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.TestBaseRapor;
+import utilities.*;
 
 import java.util.List;
 
@@ -33,15 +32,24 @@ public class US_020 extends TestBaseRapor {
         adminDashboard.adminMenuUsersME.click();
         extentTest.info("Kullanicilari görmek icin Users menusune tiklanir");
 
-        List<WebElement> abonelikPlanlariListesi = Driver.getDriver().findElements(By.xpath("//span[@class='badge bg-light-success']"));
+        boolean nextButton= true;
+        do {
+            List<WebElement> abonelikPlanlariListesi = Driver.getDriver().findElements(By.xpath("//span[@class='badge bg-light-success']"));
 
-        for (WebElement each : abonelikPlanlariListesi
-        ) {
-            Assert.assertTrue(each.isDisplayed(), "Abonelik planlari görülmedi.");
-            extentTest.pass("Sayfada görünen kullanicilarin abonelik planlari görülür.");
 
-        }
+            for (WebElement each : abonelikPlanlariListesi
+            ) {
+                Assert.assertTrue(each.isDisplayed(), "Abonelik planlari görülmedi.");
+                extentTest.pass("Sayfada görünen kullanicilarin abonelik planlari görülür.");
+            }
+            try {
+                ReusableMethods.clickWithJS("arguments[0].scrollIntoView(true);" ,adminDashboard.usersSonrakiSayfa );
+            } catch (Exception e) {
 
+                nextButton = false;
+            }
+            ReusableMethods.wait(1);
+        }while (nextButton==true);
         extentTest.info("Admin actigi web sitesini kapatir");
     }
 
