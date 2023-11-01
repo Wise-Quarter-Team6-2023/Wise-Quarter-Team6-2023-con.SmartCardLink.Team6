@@ -97,6 +97,31 @@ public class HomePage {
  @FindBy(xpath = "//button[@type='submit']")
  public WebElement LoginButtonuSM;
 
+ ////Eyyüp D
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButtonED;
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButtonuED;
+ @FindBy(id = "email")
+ public WebElement signInEmailButtonuED;
+ @FindBy(id = "password")
+ public WebElement signInPasswordButtonuED;
+ @FindBy(xpath = "//button[@type='submit']")
+ public WebElement signInLoginButtonuED;
+
+
+ /////M.Rasit
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButonuRS;
+ @FindBy(xpath = "//input[@name='email']")
+ public WebElement emailKutusuRS;
+ @FindBy(xpath = "//input[@name='password']")
+ public WebElement passwordKutusuRS;
+ @FindBy(xpath = "//button[text()='Login']")
+ public WebElement loginButonuRS;
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement basariliGirisRS;
+
 
 
 
