@@ -125,6 +125,9 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@class='toast-title']")
     public WebElement passwordDegistiUyarisiME;
 
+    @FindBy(xpath = "//button[@aria-label='Next »']")
+    public WebElement usersSonrakiSayfa;
+
 
     //////// Senol
     @FindBy(xpath = "//a[@class='nav-link p-0 active']")
@@ -171,6 +174,188 @@ public class AdminDashboard {
     public WebElement silmeElementiSM;
     @FindBy(xpath = "//*[@class='swal-button swal-button--confirm']")
     public WebElement deleteElementiSM;
+
+
+    //Mehmet K.
+    @FindBy (xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButtonuMK;
+    @FindBy (xpath = "//input[@name='email']")
+    public WebElement kullaniciEmailMK;
+    @FindBy (xpath = "//input[@name='password']")
+    public WebElement kullaniciPasswordMK;
+    @FindBy (xpath = "//button[text()='Login']")
+    public WebElement kullaniciLoginButonuMK;
+    @FindBy (xpath = "(//span[@class='aside-menu-title'])[14]")
+    public WebElement languagesMK;
+    @FindBy (xpath = "//div[@class='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement languagesSayiGoruntulemeMK;
+
+    // Eyyüp D
+    @FindBy(xpath = "//span[text()='VCards']")
+    public WebElement vcardsButtonuED;
+    @FindBy(xpath = "//a[text()='Dashboard']")
+    public WebElement adminOlarakGirisYapildigindaDadhboardYazisiED;
+    @FindBy(xpath = "(//*[@target='_blank'])[2]")
+    public WebElement VCardKartlarED;
+    @FindBy(xpath = "(//*[@target='_blank'])[2]")
+    public WebElement VCardSayfasindakiKisiUrlED;
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-chart-line fs-2'])[1]")
+    public WebElement istatistikGrafikIsaretiED;
+    @FindBy(id = "weeklyUserBarChartContainer")
+    public WebElement istatistikGrafigiED;
+    @FindBy(xpath = "//span[text()='Countries']")
+    public WebElement countriesButtonuED;
+    @FindBy(xpath = "(//strong)[3]")
+    public WebElement ulkeSayisiED;
+    @FindBy(xpath = "//a[text()='States']")
+    public WebElement eyaletButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[6]/div[2]/div[1]/strong[3]")
+    public WebElement eyaletSayisiED;
+    @FindBy(xpath = "//a[text()='Cities']")
+    public WebElement sehirButtonuED;
+    @FindBy(xpath = "(//strong)[3]")
+    public WebElement sehirSayisiED;
+    @FindBy(xpath = "//a[text()='New Country']")
+    public WebElement yeniUlkeButtonuED;
+    @FindBy(xpath = "//input[@id='countryName']")
+    public WebElement ulkeIsimEklemeButtonuED;
+    @FindBy(xpath = "//*[@id=\"short_code\"]")
+    public WebElement ulkeKodEklemeButtonuED;
+    @FindBy(xpath = "//*[@id=\"phone_code\"]")
+    public WebElement ulkeTelKodEklemeButtonuED;
+    @FindBy(xpath = "//*[@id=\"btnSave\"]")
+    public WebElement ulkeSaveButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[4]/div[1]/div[1]/form/div/input")
+    public WebElement ulkeSorguButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[6]/div[2]/div/strong")
+    public WebElement ulkeKayitSorguSayisiED;
+    @FindBy(xpath = "//a[text()='New State']")
+    public WebElement yeniEyaletButtonuED;
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement eyaletIsimEklemeButtonuED;
+    @FindBy(xpath = "(//*[@title='Select Country'])[1]")
+    public WebElement eyaletinBahlancagiUlkeButtonuED;
+    @FindBy(xpath = "//*[@role='searchbox']")
+    public WebElement eyaletinBahlancagiUlkeAramaButtonuED;
+    @FindBy(xpath = "(//*[text()='Save'])[1]")
+    public WebElement eyaletKaydetmeButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[4]/div[1]/div[1]/form/div/input")
+    public WebElement eyaletSorguButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[6]/div[2]/div/strong")
+    public WebElement eyaletKayitSorguSAyisiED;
+    @FindBy(xpath = "//*[@id='newCityBtn']")
+    public WebElement yeniSehirButtonuED;
+    @FindBy(xpath = "//*[@id=\"name\"]")
+    public WebElement sehirIsimEklemeButtonuED;
+    @FindBy(xpath = "//*[@id='select2-StateCity-container']")
+    public WebElement sehrinBaglanacagiEyaletButtonuED;
+    @FindBy(xpath = "//*[@id='addCityModal']/span/span/span[1]/input")
+    public WebElement sehrinBaglanacagiEyaletAramaButtonuED;
+    @FindBy(xpath = "//*[@id='btnSave']")
+    public WebElement sehirKaydetmeButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[4]/div[1]/div[1]/form/div/input")
+    public WebElement sehirSorguButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[6]/div[2]/div/strong")
+    public WebElement sehirKayitSorguSAyisiED;
+    @FindBy(xpath = "//*[@id=\"sidebar\"]/div[2]/ul/li[16]/a/span[2]")
+    public WebElement frontCMSButtonuED;
+    @FindBy(xpath = "//a[text()='Testimonials']")
+    public WebElement testimonalsButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[5]/table/tbody")
+    public WebElement goruslerBolumuED;
+    @FindBy(xpath = "//*[@id='addTestimonialBtn']")
+    public WebElement addTestimonialsButtonuED;
+    @FindBy(xpath = "//*[@id='name']")
+    public WebElement testimonialsIsimEklemeED;
+    @FindBy(xpath = "//*[@id='description']")
+    public WebElement testimonialsMesajEklemeED;
+    @FindBy(xpath = "//*[@id=\"profileImageIcon\"]")
+    public WebElement resimDegistirmeButtonuED;
+    @FindBy(xpath = "//*[@id=\"testimonialSave\"]")
+    public WebElement gorusSaveButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[4]/div[1]/div[1]/form/div/input")
+    public WebElement gorusSorguButtonuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[6]/div[2]/div/strong")
+    public WebElement gorusSorguSonucuED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[5]/table/tbody/tr[1]/td[2]/div/a[1]")
+    public WebElement gorusIcerigineBakisED;
+    @FindBy(xpath = "//*[@id='showTestimonialModal']/div/div/div[1]/h2")
+    public WebElement testimonalDetailsYazisiED;
+    @FindBy(xpath = "(//*[@*='Close'])[3]")
+    public WebElement testimonalDetailsKapatmaED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[5]/table/tbody/tr/td[2]/div/a[2]")
+    public WebElement gorusDegistirmeButtonuED;
+    @FindBy(xpath = "//*[@id='editDescription']")
+    public WebElement gorusYeniIcerikEklemeButtonuED;
+    @FindBy(xpath = "//*[@id='testimonialUpdate']")
+    public WebElement yeniIcerikSaveButtonuED;
+    @FindBy(xpath = "//*[@id='showDesc']")
+    public WebElement gotusIcerigiKotrolED;
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/div/div/div[5]/table/tbody/tr/td[2]/div/a[3]")
+    public WebElement gorusSilmeButtonuED;
+    @FindBy(xpath = "/html/body/div[5]/div/div[4]/div[1]/button")
+    public WebElement silmeyiOnaylamaED;
+
+
+    //M.Rasit
+    @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButonuRS;
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailKutusuRS;
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordKutusuRS;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement loginButonuRS;
+    @FindBy(xpath = "//span[text()='Cash Payments']")
+    public WebElement paymentsButonuRS;
+    @FindBy(xpath = "//span[text()='Front CMS']")
+    public WebElement frontCMSButonuRS;
+    @FindBy(xpath = "//span[text()='Subscribed User Plans']")
+    public WebElement subscribedUserPlansButonuRS;
+    @FindBy(xpath = "//label[text()='Title:']")
+    public WebElement titleTextRS;
+    @FindBy(xpath = "//label[text()='Sub Text:']")
+    public WebElement subTextYazisiRS;
+    @FindBy(xpath = "//a[text()='Features']")
+    public WebElement featuresTextRS;
+    @FindBy(xpath = "//a[text()='About Us']")
+    public WebElement aboutUsTextRS;
+    @FindBy(xpath = "//button[@rel='next']")
+    public WebElement nextButonuRS;
+    @FindBy(xpath = "//select[@id='perPage']")
+    public WebElement dropdownMenuRS;
+    @FindBy(xpath = "//tr")
+    public WebElement tumSatirRS;
+    @FindBy(xpath = "//tr/td[1]")
+    public WebElement userNameRS;
+    @FindBy(xpath = "//tr/td[2]")
+    public WebElement planNameRS;
+    @FindBy(xpath = "//tr/td[3]")
+    public WebElement startDateRS;
+    @FindBy(xpath = "//tr/td[4]")
+    public WebElement endDateRS;
+    @FindBy(xpath = "//a[@class='btn px-1 text-info fs-3 subscribed-user-plan-view-btn'][1]")
+    public WebElement detailButonuRS;
+    @FindBy(xpath = "//h5[text()='Subscribed Plan Details']")
+    public WebElement subscribedPlanDetailsYazisiRS;
+    @FindBy(xpath = "//a[@class='btn px-1 text-primary fs-3 subscribed-user-plan-edit-btn'][1]")
+    public WebElement editDateRS;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButonuRS;
+    @FindBy(xpath = "//input[@id='EndDate']")
+    public WebElement endDateTextRS;
+    @FindBy(xpath = "//select[@aria-label='Month']")
+    public WebElement monthRS;
+    @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement sonucYaziElementiRS;
+    @FindBy(xpath = "//span[@aria-label='December 27, 2023']")
+    public WebElement tarihSecRS;
+    @FindBy(xpath = "//div[text()='v7.7.0-patch5']")
+    public WebElement sayfaSonuTextYazisiRS;
+
+
+
+
 
 
 
