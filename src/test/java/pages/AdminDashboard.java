@@ -173,6 +173,23 @@ public class AdminDashboard {
     public WebElement deleteElementiSM;
 
 
+    //Mehmet K.
+    @FindBy (xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButtonuMK;
+    @FindBy (xpath = "//input[@name='email']")
+    public WebElement kullaniciEmailMK;
+    @FindBy (xpath = "//input[@name='password']")
+    public WebElement kullaniciPasswordMK;
+    @FindBy (xpath = "//button[text()='Login']")
+    public WebElement kullaniciLoginButonuMK;
+    @FindBy (xpath = "(//span[@class='aside-menu-title'])[14]")
+    public WebElement languagesMK;
+    @FindBy (xpath = "//div[@class='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement languagesSayiGoruntulemeMK;
+
+
+
+
 
 
 

@@ -119,4 +119,81 @@ public class UserDashboard {
     @FindBy(xpath = "//span[@class='svg-icon svg-icon-1']")
     public WebElement cikisKapatmaSM;
 
+
+    //Mehmet K.
+    @FindBy (xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButtonuMK;
+    @FindBy (xpath = "//input[@name='email']")
+    public WebElement kullaniciEmailMK;
+    @FindBy (xpath = "//input[@name='password']")
+    public WebElement kullaniciPasswordMK;
+    @FindBy (xpath = "//button[text()='Login']")
+    public WebElement kullaniciLoginButonuMK;
+    @FindBy (xpath = "(//span[@class='aside-menu-title'])[2]")
+    public WebElement vcardButonuMK;
+    @FindBy (xpath = "//a[@type='button']")
+    public WebElement newVCardButonuMK;
+    @FindBy (xpath = "//*[@*='generate-url-alias']")
+    public WebElement urlAliasMK;
+    @FindBy (xpath = "//input[@name='name']")
+    public WebElement vcardNameMK;
+    @FindBy (xpath = "//input[@value='Save']")
+    public WebElement saveButtonMK;
+    @FindBy (xpath = "//a[@class='btn btn-outline-primary float-end']")
+    public WebElement backButtonMK;
+    @FindBy (xpath = "//input[@id='first_name']")
+    public WebElement firstNameMK;
+    @FindBy (xpath = "//input[@id='last_name']")
+    public WebElement lastNameMK;
+    @FindBy (xpath = "//*[@*='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement sayininGoruntulenebilirligiMK;
+    @FindBy (xpath = "//input[@value='Save']")
+    public WebElement save2ButtonMK;
+    @FindBy (xpath = "(//a[@title='QR Code'])[1]")
+    public WebElement qaKodeAktifButtonMK;
+    @FindBy (xpath = "(//*[@*='download'])[1]")
+    public WebElement dowloadVCardButtonMK;
+    @FindBy (xpath = "(//*[@*='Enquiries'])[1]")
+    public WebElement enquiriesButtonMK;
+    @FindBy (xpath = "(//*[@data-icon='pen-to-square'])[1]")
+    public WebElement editButtonMK;
+    @FindBy (xpath = "//a[@title='Delete']")
+    public WebElement deleteButtonMK;
+    @FindBy (xpath = "//*[text()='Manage Subscription']")
+    public WebElement editGorunurluguMK;
+    @FindBy (xpath = "(//*[@class='swal-button-container'])[1]")
+    public WebElement deleteOnayButtonuMK;
+    @FindBy (xpath = "(//*[@class='svg-inline--fa fa-id-card'])[2]")
+    public WebElement virtualBackButtonuMK;
+    @FindBy (xpath = "//h1[@class='mb-0']")
+    public WebElement enquiriesSayfaGorunurluguMK;
+    @FindBy (xpath = "//h1[text()='Edit VCard']")
+    public WebElement editSayfaGorunurluguMK;
+    @FindBy (xpath = "//div[@class='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement vcardSayisiMK;
+    @FindBy (xpath = "(//img[@data-id='1'])[2]")
+    public WebElement birinciKartButtonuMK;
+    //span[@id='select2-e-vcard-id-container']
+    @FindBy (xpath = "//span[@id='select2-e-vcard-id-container']")
+    public WebElement vcardIsimSelecktMK;
+    @FindBy (xpath = "//*[@data-select2-id='select2-data-64-vu3e']")
+    public WebElement vcardIsimValueMK;
+    @FindBy (xpath = "//input[@id='e-card-first-name']")
+    public WebElement firstNameArkaPlanMK;
+    @FindBy (xpath = "//input[@id='e-card-last-name']")
+    public WebElement lastNameArkaPlanMK;
+    @FindBy (xpath = "//input[@id='e-card-email']")
+    public WebElement emailArkaPlanMK;
+    @FindBy (xpath = "//input[@id='e-card-occupation']")
+    public WebElement occupationArkaPlanMK;
+    @FindBy (xpath = "//input[@id='e-card-location']")
+    public WebElement locationArkaPlanMK;
+    @FindBy (xpath = "//*[@*='phoneNumber']")
+    public WebElement phoneNummerArkaPlanMK;
+    @FindBy (xpath = "//*[@*='e-card-website']")
+    public WebElement websiteArkaPlanMK;
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement saveArkaPlanMK;
+    @FindBy (xpath = "//*[@id='profileImageIcon']")
+    public  WebElement fotoeklemeMK;
 }
