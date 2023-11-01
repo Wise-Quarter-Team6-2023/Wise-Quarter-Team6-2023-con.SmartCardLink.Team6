@@ -125,6 +125,9 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@class='toast-title']")
     public WebElement passwordDegistiUyarisiME;
 
+    @FindBy(xpath = "//button[@aria-label='Next »']")
+    public WebElement usersSonrakiSayfa;
+
 
     //////// Senol
     @FindBy(xpath = "//a[@class='nav-link p-0 active']")
@@ -292,6 +295,64 @@ public class AdminDashboard {
     public WebElement gorusSilmeButtonuED;
     @FindBy(xpath = "/html/body/div[5]/div/div[4]/div[1]/button")
     public WebElement silmeyiOnaylamaED;
+
+
+    //M.Rasit
+    @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButonuRS;
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailKutusuRS;
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordKutusuRS;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement loginButonuRS;
+    @FindBy(xpath = "//span[text()='Cash Payments']")
+    public WebElement paymentsButonuRS;
+    @FindBy(xpath = "//span[text()='Front CMS']")
+    public WebElement frontCMSButonuRS;
+    @FindBy(xpath = "//span[text()='Subscribed User Plans']")
+    public WebElement subscribedUserPlansButonuRS;
+    @FindBy(xpath = "//label[text()='Title:']")
+    public WebElement titleTextRS;
+    @FindBy(xpath = "//label[text()='Sub Text:']")
+    public WebElement subTextYazisiRS;
+    @FindBy(xpath = "//a[text()='Features']")
+    public WebElement featuresTextRS;
+    @FindBy(xpath = "//a[text()='About Us']")
+    public WebElement aboutUsTextRS;
+    @FindBy(xpath = "//button[@rel='next']")
+    public WebElement nextButonuRS;
+    @FindBy(xpath = "//select[@id='perPage']")
+    public WebElement dropdownMenuRS;
+    @FindBy(xpath = "//tr")
+    public WebElement tumSatirRS;
+    @FindBy(xpath = "//tr/td[1]")
+    public WebElement userNameRS;
+    @FindBy(xpath = "//tr/td[2]")
+    public WebElement planNameRS;
+    @FindBy(xpath = "//tr/td[3]")
+    public WebElement startDateRS;
+    @FindBy(xpath = "//tr/td[4]")
+    public WebElement endDateRS;
+    @FindBy(xpath = "//a[@class='btn px-1 text-info fs-3 subscribed-user-plan-view-btn'][1]")
+    public WebElement detailButonuRS;
+    @FindBy(xpath = "//h5[text()='Subscribed Plan Details']")
+    public WebElement subscribedPlanDetailsYazisiRS;
+    @FindBy(xpath = "//a[@class='btn px-1 text-primary fs-3 subscribed-user-plan-edit-btn'][1]")
+    public WebElement editDateRS;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButonuRS;
+    @FindBy(xpath = "//input[@id='EndDate']")
+    public WebElement endDateTextRS;
+    @FindBy(xpath = "//select[@aria-label='Month']")
+    public WebElement monthRS;
+    @FindBy(xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement sonucYaziElementiRS;
+    @FindBy(xpath = "//span[@aria-label='December 27, 2023']")
+    public WebElement tarihSecRS;
+    @FindBy(xpath = "//div[text()='v7.7.0-patch5']")
+    public WebElement sayfaSonuTextYazisiRS;
+
 
 
 

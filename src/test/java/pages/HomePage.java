@@ -110,6 +110,20 @@ public class HomePage {
  public WebElement signInLoginButtonuED;
 
 
+ /////M.Rasit
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButonuRS;
+ @FindBy(xpath = "//input[@name='email']")
+ public WebElement emailKutusuRS;
+ @FindBy(xpath = "//input[@name='password']")
+ public WebElement passwordKutusuRS;
+ @FindBy(xpath = "//button[text()='Login']")
+ public WebElement loginButonuRS;
+ @FindBy(xpath = "//a[@class='nav-link p-0 active']")
+ public WebElement basariliGirisRS;
+
+
+
 
 
 
