@@ -10,11 +10,10 @@ import java.sql.SQLOutput;
 public class HomePage {
     public HomePage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-   // Header/Features Link
+   // M.Emin
     @FindBy(xpath="//a[text()='Features']")
     public WebElement FeaturesTextLinkME;
 
-    //Homepage SignIn Button
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButtonME;
 
@@ -122,6 +121,95 @@ public class HomePage {
  @FindBy(xpath = "//a[@class='nav-link p-0 active']")
  public WebElement basariliGirisRS;
 
+
+//Necmettin
+// Header/Features Link
+@FindBy(xpath="//a[text()='Features']")
+public WebElement FeaturesTextLinkNK;
+ //Homepage SignIn Button
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButtonNK;
+ //SignIn/emailBox
+ @FindBy(xpath = "//input[@name='email']")
+ public WebElement emailBoxNK;
+ //SignIn/passwordBox
+ @FindBy(xpath = "//input[@name='password']")
+ public WebElement passwordBoxNK;
+ //SignIn/LoginButton
+ @FindBy(xpath = "//button[@type='submit']")
+ public WebElement loginButtonNK;
+
+ //Ramazan k.
+ // Header/Features Link
+ @FindBy(xpath = "//a[text()='Features']")
+ public WebElement FeaturesTextLinkrk;
+
+ //Homepage SignIn Button
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInButtonrk;
+
+ @FindBy(xpath = "//a[@class='btn btn-orange ']")
+ public WebElement getStartedbuttonurk;
+
+ @FindBy(xpath = "//img[@class='img-fluid logo-fix-size']")
+ public WebElement smartCardLinkrk;
+
+ @FindBy(xpath = "//button[@class='slick-prev slick-arrow']")
+ public WebElement solButtonrk;
+ @FindBy(xpath = "(//button[@type='button'])[2]")
+ public WebElement sagButtonrk;
+
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[12]")
+ public WebElement silverChooseplanrk;
+
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[11]")
+ public WebElement standardChooseplanrk;
+
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[10]")
+ public WebElement gulsahChooseplanrk;
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[9]")
+ public WebElement VipChooseplanrk;
+
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[14]")
+ public WebElement unlimitedChooseplanrk;
+ @FindBy(xpath = "(//*[@class='btn btn-primary rounded-pill mx-auto  '])[13]")
+ public WebElement GoldChooseplanrk;
+
+
+ @FindBy(xpath = "//*[text()='info@smartcardlink.com']")
+ public WebElement bodyMailrk;
+
+ @FindBy(xpath = "//*[text()='+1 987-654-3210']")
+ public WebElement bodyTelrk;
+
+
+ @FindBy(xpath = "//input[@placeholder='Enter Your Name*']")
+ public WebElement bodyNamerk;
+
+ @FindBy(xpath = "//input[@id='submit']")
+ public WebElement sendMessagerk;
+
+ @FindBy(xpath = "//div[text()='Message send successfully.']")
+ public WebElement messageSendsuccessrk;
+
+ @FindBy(xpath = "//input[@placeholder='Enter Your Email*']")
+ public WebElement enterEmailrk;
+
+ @FindBy(xpath = "//input[@placeholder='Subject*']")
+ public WebElement subjectrk;
+
+
+ @FindBy(xpath = "//input[@placeholder='Enter Your Email']")
+ public WebElement entermailrk;
+
+ @FindBy(xpath = "//button[@type='submit']")
+ public WebElement subsriciberk;
+
+ @FindBy(xpath = "//div[@class='toast-message']")
+ public  WebElement  Successfullyrk;
+
+ @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+ public WebElement signInrk;
 
 
 

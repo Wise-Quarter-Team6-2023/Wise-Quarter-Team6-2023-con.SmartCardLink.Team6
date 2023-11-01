@@ -5,11 +5,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminDashboard {
     public AdminDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
+
+
+    ////M.Emin
     @FindBy(xpath = "//input[@name='email']")
     public WebElement logInEMailME;
 
@@ -353,6 +358,139 @@ public class AdminDashboard {
     @FindBy(xpath = "//div[text()='v7.7.0-patch5']")
     public WebElement sayfaSonuTextYazisiRS;
 
+
+
+
+    ///Necmettin
+    //Dasshboard Elementleri
+    @FindBy (xpath = "(//h2[@class='fs-1-xxl fw-bolder text-white'])[1]")
+    public WebElement totalActiveUsersNumberNK;
+    @FindBy (xpath = "(//h2[@class='fs-1-xxl fw-bolder text-white'])[2]")
+    public WebElement totalActiveVCardsNumberNK;
+    @FindBy (xpath = "(//h2[@class='fs-1-xxl fw-bolder text-white'])[3]")
+    public WebElement totalDectiveUsersNumberNK;
+    @FindBy (xpath = "(//h2[@class='fs-1-xxl fw-bolder text-white'])[4]")
+    public WebElement totalDeactiveVCardsNumberNK;
+    @FindBy (xpath = "(//h3[@class='mb-0 fs-4 fw-light'])[1]")
+    public WebElement totalActiveUsersTextNK;
+    @FindBy (xpath = "(//h3[@class='mb-0 fs-4 fw-light'])[2]")
+    public WebElement totalActiveVCardsTextNK;
+    @FindBy (xpath = "(//h3[@class='mb-0 fs-4 fw-light'])[3]")
+    public WebElement totalDectiveUsersTextNK;
+    @FindBy (xpath = "(//h3[@class='mb-0 fs-4 fw-light'])[4]")
+    public WebElement totalDeactiveVCardsTextNK;
+    @FindBy (id = "dashboardPlanPieChart")
+    public WebElement plansByUsersChartNK;
+    @FindBy (id = "dashboardIncomeChart")
+    public WebElement incomeChartNK;
+    @FindBy (xpath = "//button[@class='nav-link active p-0']")
+    public WebElement dayButtonNK;
+    @FindBy (xpath = "(//button[@class='nav-link p-0'])[1]")
+    public WebElement weekButtonNK;
+    @FindBy (xpath = "(//button[@class='nav-link p-0'])[2]")
+    public WebElement monthButtonNK;
+    @FindBy (xpath = "(//table[@class='table table-striped'])[3]//td")
+    public List<WebElement> allElementsOfTableNK;
+    @FindBy(xpath = "(//a[@class='nav-link d-flex align-items-center py-3'])[11]")
+    public WebElement withdrawTranssactionsPageLinkNK;
+    @FindBy (xpath = "//table[@class='table table-striped']//td")
+    public List<WebElement> allElementsOfWithdrawTransactionsTableNK;
+    @FindBy (xpath = "(//li[@class='nav-item '])[8]")
+    public WebElement affiliationTransactionsPageLinkNK;
+    @FindBy (xpath = "//div[@class='text-muted ms-sm-3 pagination-record']//strong[3]")
+    public WebElement resultNumberNK;
+    @FindBy (xpath ="//select[@class='form-select w-auto data-sorting pl-1 pr-5 py-2']")
+    public WebElement numberOfUsersDisplayedNK;
+    @FindBy (xpath = "(//div[@class='col-8'])[1]//span")
+    public WebElement nameInAffiliationWithdrawDetailsNK;
+    @FindBy (xpath = "(//div[@class='col-8'])[2]//span")
+    public WebElement amountInAffiliationWithdrawDetailsNK;
+    @FindBy (xpath = "(//div[@class='col-8'])[3]//span")
+    public WebElement statusInAffiliationWithdrawDetailsNK;
+    @FindBy (xpath = "(//div[@class='col-8'])[4]//span")
+    public WebElement dateInAffiliationWithdrawDetailsNK;
+    @FindBy (xpath = "(//button[@class='btn-close'])[5]")
+    public WebElement closeButtonOfAffiliationWithdrawDetailsNK;
+
+
+    ///Ramazan K
+    @FindBy(linkText = "Kacmaz Ramazan")
+    public WebElement affilitedrk;
+
+    @FindBy(linkText = "eyyup Yilmaz")
+    public WebElement affilitedUser2rk;
+
+    @FindBy(xpath = "(//span[@class='aside-menu-title'])[9]")
+    public WebElement  affilitedUserrk;
+
+    @FindBy(xpath = "(//span[@class='badge bg-success me-2'])[1]")
+    public WebElement amountrk;
+
+    @FindBy(xpath = "(//span[@class='badge bg-secondary me-2'])[1]")
+    public WebElement daterk;
+
+
+    //AdemB
+    @FindBy(
+            xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']"
+    )
+    public WebElement signInButtonAB;
+    @FindBy(xpath = "(//a[@class='link-info fs-6 text-decoration-none'])[2] ")
+    public WebElement createAnAccountElementAB;
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement firstNameElementAB;
+
+    @FindBy(xpath = "//input[@name='last_name']")
+    public WebElement lastNameElementAB;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailElementAB;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordElementiAB;
+
+    @FindBy(xpath = "//input[@name='password_confirmation']")
+    public WebElement passwordConfirmationElementAB;
+    @FindBy(xpath = "//input[@name='term_policy_check']")
+    public WebElement termPolicyCheckBoxElementAB;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButtonElementAB;
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement loginButtonuAB;
+
+    @FindBy (id="remember_me")
+    public WebElement rememeberMeCheckBoxAB;
+    @FindBy (xpath ="//input[@name='email']")
+    public WebElement signinBoxElementiAB;
+    @FindBy (xpath = "//input[@name='password']")
+    public WebElement passwordBoxElementAB;
+
+    @FindBy (xpath = "//button[@class='btn dropdown-toggle ps-2 pe-0']")
+    public WebElement adminDropDownElementAB;
+
+    @FindBy (xpath = "(//*[text()='VCard Templates'])[1]")
+    public  WebElement vcardTemplatesLinkElementAB;
+
+    @FindBy (xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement vcardElementAB;
+    @FindBy (xpath = "(//span[@class='aside-menu-title'])[3]")
+    public WebElement usersLinkElementAB;
+    @FindBy (xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public WebElement showingResultElementiAB;
+    @FindBy (xpath = "(//a[@title='Delete'])[1]")
+    public WebElement deleteButtonuAB;
+
+    @FindBy (xpath = "//button[@class='swal-button swal-button--confirm']")
+    public WebElement yesDeleteElementAB;
+    @FindBy (xpath = "//table[@class='table table-striped']")
+    public WebElement usersTabloElementAB;
+    @FindBy (xpath = "//div[@class='swal-text']")
+    public WebElement deletedYaziElementAB;
+    @FindBy (xpath = "(//a[@class='mb-1 text-decoration-none fs-6'])[1]")
+    public WebElement ilkisimElementiAB;
+
+    @FindBy (xpath = "//div[@class='swal-title']")
+    public WebElement deletedElementAB;
 
 
 

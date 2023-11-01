@@ -9,6 +9,8 @@ public class UserDashboard {
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+    ////M.Emin
     @FindBy(xpath = "//input[@name='email']")
     public WebElement logInEMailME;
 
@@ -196,4 +198,95 @@ public class UserDashboard {
     public WebElement saveArkaPlanMK;
     @FindBy (xpath = "//*[@id='profileImageIcon']")
     public  WebElement fotoeklemeMK;
+
+
+    ///Necmettin
+    //Dashboard/VCards page link
+    @FindBy(xpath = "(//a[@class='nav-link d-flex align-items-center py-3'])[2]")
+    public WebElement VCardsPageLinkNK;
+    //VCards/PreviewUrl
+    @FindBy(id = "vcardUrl125")
+    public WebElement previewUrlOfVCardNK;
+    //VCards/VCard preview
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement nameBoxInVCardPreviewNK;
+    @FindBy(xpath = "//input[@type='email']")
+    public WebElement emailBoxInVCardPreviewNK;
+    @FindBy(xpath = "//input[@type='tel']")
+    public WebElement telBoxInVCardPreviewNK;
+    @FindBy(xpath = "//textarea[@class='form-control']")
+    public WebElement messageBoxInVCardPreviewNK;
+    @FindBy(xpath = "//button[@class='contact-btn text-white mt-4 d-block ms-sm-auto']")
+    public WebElement sendMessageButtonInVCardPreviewNK;
+    //Dashboard/Enquiries page link
+    @FindBy(xpath = "(//a[@class='nav-link d-flex align-items-center py-3'])[3]")
+    public WebElement EnquiriesPageLinkNK;
+    //Enquiries sayfasindaki tablo elementleri
+    @FindBy (xpath = "//table[@class='table table-striped']//tr[1]/td[2]")
+    public WebElement nameOfFirstElementNK;
+    @FindBy (xpath = "//tr[1]/td[3]")
+    public WebElement emailOfFirstElementNK;
+    @FindBy (xpath = "//tr[1]/td[4]")
+    public WebElement PhoneOfFirstElementNK;
+    @FindBy(xpath = "(//a[@title='View'])[1]")
+    public WebElement viewIconOfFirstElementNK;
+    @FindBy(xpath = "(//a[@title='Delete'])[1]")
+    public WebElement deleteIconOfFirstElementNK;
+    @FindBy(xpath = "//div[@class='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement showingResultsElementNK;
+    //Enquiries ilk elementin view butonuna basildiginda acilan penceredeki elementler
+    @FindBy (xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div[2]/div/div/div[2]/div/div[3]/p")
+    public WebElement nameOfEnquiryDetailsNK;
+    @FindBy (id = "showEmail")
+    public WebElement emailOfEnquiryDetailsNK;
+    @FindBy (id = "showPhone")
+    public WebElement phoneOfEnquiryDetailsNK;
+    @FindBy (id = "showMessage")
+    public WebElement messageOfEnquiryDetailsNK;
+    @FindBy (xpath = "(//button[@class='btn-close'])[1]")
+    public WebElement closeButtonOfEnquiryDetailsNK;
+    @FindBy (xpath = "//button[@class='swal-button swal-button--confirm']")
+    public WebElement yesDeleteButtonOfEnquiryDetailsNK;
+
+
+
+    //Ramazan K.
+    @FindBy(linkText = "Create an Account")
+    public WebElement createanAccountrk;
+
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement firstNamerk;
+    @FindBy(xpath = "//input[@type='checkbox']")
+    public WebElement checkboxrk;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitrk;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement singInmailrk;
+
+    @FindBy(xpath = "//button[@class='btn dropdown-toggle ps-2 pe-0']")
+    public WebElement logindropdownrk;
+
+    @FindBy(xpath = "//a[@id='changePassword']")
+    public WebElement changePasswordrk;
+
+    @FindBy(xpath = "(//input[@class='form-control'])[2]")
+    public WebElement currentPasswortrk;
+
+    @FindBy(xpath = "//button[@id='passwordChangeBtn']")
+    public WebElement passwordChangeBtnrk;
+
+    @FindBy(xpath = "//div[@id='changePasswordModal']")
+    public WebElement passwordChangeSuccesfullyrk;
+
+    @FindBy(xpath = "//a[@id='changeLanguage']")
+    public WebElement changeLanguagerk;
+
+    @FindBy(xpath = "//select[@class='form-control form-select select2-hidden-accessible']")
+    public WebElement changeLanguageSelectrk;
+
+    @FindBy(xpath = "//button[@id='languageChangeBtn']")
+    public WebElement languageChangeBtnrk;
+
 }
