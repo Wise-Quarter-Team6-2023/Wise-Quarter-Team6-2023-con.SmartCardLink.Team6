@@ -107,7 +107,9 @@ public class US_35 extends TestBaseRapor {
         Driver.getDriver().get(gorusSorguUrl + ConfigReader.getProperty("eklenecekGorusIsmi"));
         String expectedGorusSorguSonucu = "1";
         String actualGorusSorguSonucu = adminDashboard.gorusSorguSonucuED.getText();
-        Assert.assertEquals(actualGorusSorguSonucu, expectedGorusSorguSonucu,"Testin basarisiz olmasi durumunda ilk once lutfen resim dosya yolunu kontrol ediniz(satir:69)");
+        Assert.assertEquals(actualGorusSorguSonucu, expectedGorusSorguSonucu,"Testin basarisiz olmasi durumunda ilk once lutfen resim dosya yolunu kontrol ediniz(satir:69)"+"" +
+                "Test foto dosyasinda bulunan resmin copyPath/referance deyip en ustteki   absolute path i alin ");
+
         extentTest.pass("Yeni gorusun eklendigini test eder");
         ReusableMethods.wait(1);
 
