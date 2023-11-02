@@ -6,6 +6,7 @@ import pages.AdminDashboard;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 import java.awt.*;
@@ -25,6 +26,7 @@ public class US_21 extends TestBaseRapor {
         extentTest.info("Kullanici admin bilgileri ile https://qa.smartcardlink.com/ sitesine giris yapar");
 
         // Sign In butonuna tiklar
+        ReusableMethods.wait(2);
         homePage.signInButtonuED.click();
 
         // Giris yapmak icin acilan sayfada E-Mail bolumune admin icin verilen E-Mail girin
@@ -86,7 +88,7 @@ public class US_21 extends TestBaseRapor {
         extentTest.pass("Kartlarin istatistik grafinin goruntulenebilgigini test eder");
 
         // Sayfalari kapatir
-
+          Driver.quitDriver();
 
 
 
