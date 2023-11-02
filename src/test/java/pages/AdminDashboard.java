@@ -431,6 +431,19 @@ public class AdminDashboard {
 
 
     //AdemB
+
+    @FindBy (xpath = "(//span[@class='aside-menu-title'])[16]")
+    public WebElement frontCmsElementAB;
+
+
+    @FindBy (xpath = "//a[@class='nav-link p-0 active']")
+    public WebElement frontCmsTextElementAB;
+
+    @FindBy (xpath = "//*[text()='Subscribers']")
+    public WebElement subscribersHeaderElemntiAB;
+
+    @FindBy (xpath = "//div[@class='text-muted ms-sm-3 pagination-record']")
+    public  WebElement showingresultsSubscribersElementAB;
     @FindBy(
             xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']"
     )
