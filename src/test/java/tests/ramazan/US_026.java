@@ -34,11 +34,11 @@ public class US_026 extends TestBaseRapor {
 
         Driver.getDriver().get(ConfigReader.getProperty("samartCarLinkUrl"));
         extentTest.info("Kullanici qa.smartcardlink sitesine gider ");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         homePage.signInrk.click();
         extentTest.info("Kullanici Sing In buttonuna click yapar");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         actions.click(userDashboard.singInmailrk)
                 .sendKeys(ConfigReader.getProperty("adminusername"))
@@ -50,35 +50,35 @@ public class US_026 extends TestBaseRapor {
 
         userDashboard.submitrk.click();
         extentTest.info("Click Login");
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
 
         adminDashboard.affilitedUserrk.click();
         extentTest.info("Afilliate Users Click ");
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
 
         String expectedafilliated = ConfigReader.getProperty("affilitedrkortak");
         String actualafilliated = adminDashboard.affilitedrk.getText();
         Assert.assertTrue(actualafilliated.contains(expectedafilliated));
         extentTest.pass("Ortaklik 'Kacmaz Ramazan' tarafindan yapildigi test edilir.");
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(2);
 
         String expectedUser = ConfigReader.getProperty("affilitedUser");
         String actaulUser = adminDashboard.affilitedUser2rk.getText();
         Assert.assertTrue(actaulUser.contains(expectedUser));
         extentTest.pass("Kayit edilen User 'eyyup Yilmaz' oldugu test edilir ");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         String expectedamount = ConfigReader.getProperty("affilitedamount");
         String actualamount = adminDashboard.amountrk.getText();
         Assert.assertTrue(actualamount.contains(expectedamount));
         extentTest.pass("amount $10.00 oldugu test edilir");
 
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
         String expectedDate = ConfigReader.getProperty("date");
         String actualDate = adminDashboard.daterk.getText();
         Assert.assertTrue(actualDate.contains(expectedDate));
         extentTest.pass("kayit tarihinin '31st Oct, 2023' oldugu test edilir ");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         Driver.closeDriver();
 
