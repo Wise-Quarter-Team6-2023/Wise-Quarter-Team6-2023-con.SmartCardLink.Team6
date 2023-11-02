@@ -30,14 +30,14 @@ public class US_014 extends TestBaseRapor {
 
         Driver.getDriver().get(ConfigReader.getProperty("samartCarLinkUrl"));
         extentTest.info("Kullanici qa.smartcardlink sitesine gider ");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         homePage.signInrk.click();
         extentTest.info("Kullanici Sing In buttonuna click yapar");
 
         userDashboard.createanAccountrk.click();
         extentTest.info("User  Create an Account  click ");
-        ReusableMethods.bekle(3);
+        ReusableMethods.wait(2);
 
         actions.click(userDashboard.firstNamerk)
                 .sendKeys(ConfigReader.getProperty("FirstName"))
@@ -52,14 +52,13 @@ public class US_014 extends TestBaseRapor {
                 .perform();
 
         extentTest.info("Kullanici creat accont icin bilgileri girer");
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(2);
 
         userDashboard.checkboxrk.click();
         extentTest.info("kullanici singin agre click");
 
         userDashboard.submitrk.click();
-        extentTest.info("User submit click");
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(2);
 
         actions.click(userDashboard.singInmailrk)
                 .sendKeys(ConfigReader.getProperty("Email"))
@@ -80,7 +79,7 @@ public class US_014 extends TestBaseRapor {
 
         userDashboard.changePasswordrk.click();
         extentTest.info("user click change passwort");
-        ReusableMethods.bekle(5);
+        ReusableMethods.wait(2);
 
         actions.click(userDashboard.currentPasswortrk)
                 .sendKeys(ConfigReader.getProperty("Password"))
@@ -91,7 +90,7 @@ public class US_014 extends TestBaseRapor {
                 .perform();
         extentTest.info("user passwordChange input ");
 
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         extentTest.info("user input new passwort");
 
         userDashboard.passwordChangeBtnrk.click();
@@ -99,36 +98,35 @@ public class US_014 extends TestBaseRapor {
 
         Assert.assertTrue(userDashboard.passwordChangeSuccesfullyrk.isDisplayed());
         extentTest.pass("passwordChangeSuccesfully aktif ");
-
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         userDashboard.logindropdownrk.click();
         extentTest.info("login dtpbdown click");
 
         userDashboard.changeLanguagerk.click();
         extentTest.info("Click changeLanguage ");
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         Select select = new Select(userDashboard.changeLanguageSelectrk);
         select.selectByVisibleText("German");
         extentTest.info("Click changeLanguageSelect");
 
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         userDashboard.languageChangeBtnrk.click();
         extentTest.info("Click languageChangeBtn");
 
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
 
         userDashboard.logindropdownrk.click();
         extentTest.info("login dtpbdown click");
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         userDashboard.changeLanguagerk.click();
         extentTest.info("Click changeLanguage ");
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
         String expected = "German";
         String actual = select.getFirstSelectedOption().getText();
 
         Assert.assertEquals(actual,expected);
 
-        ReusableMethods.bekle(10);
+        ReusableMethods.wait(2);
 
         Driver.closeDriver();
 
