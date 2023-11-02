@@ -107,7 +107,7 @@ public class US_30 extends TestBaseRapor {
         // Ulke sorgu sonucunun "1" oldugunu dogrulayarak ulkenin kaydedildigini test eder
         String expectedULkeSorguSonucu = "1";
         String actualUlkeSorguSonucu = adminDashboard.ulkeKayitSorguSayisiED.getText();
-        Assert.assertEquals(actualUlkeSorguSonucu, expectedULkeSorguSonucu,"Test failed cikarsa lutfen daha once calistirip ayni isimde 'Test Ulkesi Utopya' " +
+        Assert.assertEquals(actualUlkeSorguSonucu, expectedULkeSorguSonucu,"Test failed cikarsa;  ayni isimde 'Test Ulkesi Utopya' olarak ulke vardir " +
                 "kaydedilen ulkeyi silin ve tekrar calistirin");
         extentTest.pass("yeni Ulkenin kaydedilebildiğini test eder");
         ReusableMethods.wait(2);
@@ -171,7 +171,7 @@ public class US_30 extends TestBaseRapor {
         extentTest.pass("yeni sehrin kaydedilebildiğini test eder");
 
         //sayfayi kapatir
-        Driver.getDriver().quit();
+
 
 
 
